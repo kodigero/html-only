@@ -7,6 +7,161 @@
     <title>JCA PolyDev | Survey</title>
 </head>
 <body>
-    <p><a href="index.html">Go back to Home Page</a></p>
+    <header>
+        <h1>My Nonsense Survey</h1>
+    </header><hr><br>
+    <main>
+        <form action="survey-result.html" target="_self" method="GET">
+
+            <label for="gsearch">Search Google for the meaning of life: </label>
+            <input type="search" id="gsearch" name="gsearch" value="Meaning of Life"><br><br><br>
+
+            <label for="user">Username:</label>
+            <input type="text" id="user" name="user"><br><br>
+            <label for="pwd">Password:</label>
+            <input type="password" id="pwd" name="pwd"><br><br><br>
+
+            <label for="browser">What web browser are you using?</label><br>
+            <input list="browsers" name="browser" id="browser">
+            <datalist id="browsers">
+                <option value="Edge">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist><br><br><br>
+
+            <span>Can I have a minute of your time?</span><br>
+            <input type="button" value="Yeah, let's do this!" onclick="msg()">
+            <input type="button" value="Nah, I have more important things to do!" onclick="msg()"><br><br>
+            <hr><br>
+
+            <fieldset name="personal">
+                <br>
+                <legend>PERSONAL INFORMATION:</legend>
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname" required><br><br>
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname" required><br><br><br>
+
+                <label for="phonenum">Mobile Number <em>(Ex. format: 0912-345-6789)</em>:</label><br/>
+                <input id="phonenum" type="tel" pattern="^\d{4}-\d{3}-\d{4}$" required ><br><br><br>
+
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email"><br><br><br>
+
+                <label for="bdate">Birthdate:</label>
+                <input type="date" id="bdate"><br><br><br>
+
+                <span>Gender:</span><br>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label><br>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="others">Others</label><span> (please specify): </span><br>
+                <input type="text" id="others" name="gender"><br><br><br>
+
+                <label for="civil">Civil Status:</label>
+                <select name="civil" id="civil">
+                    <option value="single">Single</option>
+                    <option value="married">Married</option>
+                    <option value="divorced">Divorced</option>
+                    <option value="separated">Separated</option>
+                    <option value="widowed">Widowed</option>
+                </select><br><br><br>
+
+                <label for="occupation">Occupation:</label>
+                <select  name="occupation" id="occupation">
+                <optgroup label="Student">
+                    <option value="enrolled">Enrolled</option>
+                    <option value="graduated">Graduated</option>
+                </optgroup>
+                <optgroup label="Employed">
+                    <option value="public">Public</option>
+                    <option value="private">Private</option>
+                </optgroup>
+                </select><br><br><br>
+
+                <label for="fbprof">Facebook Profile URL:</label><br>
+                <input type="url" id="fbprof" name="fbprof"><br><br><br>
+                
+                <label for="valid">Please submit a scan of your valid ID:</label>
+                <input type="file" id="valid" name="valid">
+                <br><br>
+            </fieldset><br><br><br>
+
+            
+            <span>What are your interests? (Select all that applies)</span><br>
+            <input type="checkbox" id="int1" name="int1" value="Music">
+            <label for="int1"> Music</label><br>
+            <input type="checkbox" id="int2" name="int2" value="Art">
+            <label for="int2"> Art</label><br>
+            <input type="checkbox" id="int3" name="int3" value="Travel">
+            <label for="int3"> Travel</label><br>
+            <input type="checkbox" id="int4" name="int4" value="Business">
+            <label for="int4"> Business</label><br>
+            <input type="checkbox" id="int5" name="int5" value="Sports">
+            <label for="int5"> Sports</label><br>
+            <input type="checkbox" id="int6" name="int6" value="Technology">
+            <label for="int6"> Technology</label><br>
+            <input type="checkbox" id="int7" name="int7" value="Fashion">
+            <label for="int7"> Fashion</label><br>
+            <input type="checkbox" id="int8" name="int8" value="Leisure">
+            <label for="int8"> Leisure</label><br>
+            <input type="checkbox" id="int9" name="int9" value="Literature">
+            <label for="int9"> Literature</label><br><br><br>
+            
+            <label for="favcolor">What is your favorite color: </label><br>
+            <input type="color" id="favcolor" name="favcolor" value="#00fffb"><span> (Click the color picker)</span>
+            <br><br><br>
+        
+            <label for="calltime">If I where to call you, when and what time? </label><br>
+            <input type="datetime-local" id="calltime" name="calltime"><br><br><br>
+            
+            <label for="favmonth">What is your favorite month of the year? </label><br>
+            <input type="month" id="favmonth" name="favmonth"><br><br><br>
+
+            <label for="week">If you are to start a daily fitness routine, pick a favorable week: </label><br>
+            <input type="week" id="week" name="week"><br><br><br>
+
+            <label for="appt">What time do you wake up in the morning?</label><br>
+            <input type="time" id="appt" name="appt"><br><br><br><br><br>
+
+            <fieldset>
+                <p>Reset all of my answers:</p>
+                <input type="reset"><br><br><br>
+
+                <label for="quantity">Rate this survey from 1 to 10 (10 being the highest):</label><br><br>
+                <input type="number" id="quantity" name="quantity" min="1" max="10"><br><br><br>
+                <input type="hidden" id="idiotId" name="idiotId" value="3007">
+
+                <label for="points">Rate yourself in terms of intelligence (between 0 to 5):</label><br><br>
+                <input type="range" id="points" name="points" min="0" max="5"><br><br><br>
+
+                <label for="review">What can you say about this website?:</label>
+                <textarea id="review" name="review" rows="4" cols="50">This website is awesome!</textarea><br><br><br>
+
+            </fieldset><br><br><br>
+
+            
+            <fieldset>
+                <p>You can click the Submit button:</p>
+                <input type="submit" value="Submit"><br><br><br>
+                <p>or click this image for the same result: </p><br>
+                <input type="image" src="images/button.gif" alt="Submit" width="100" height="100"><br><br><br>
+                <p>or click this button for the same result</p>
+                <button type="submit"><br><b><i>Click Me!</i></b><br>
+                    <img src="https://www.iconpacks.net/icons/1/free-hand-cursor-icon-1299-thumb.png" alt="click icon" width="100px">
+                    <br>
+                </button>
+            </fieldset>
+
+        </form>
+    </main><br><br><br>
+    <footer>
+        <p><a href="index.html">Go back to Home Page</a></p>
+        <p>Copyright &copy; JCA PolyDev 2021.</p>
+    </footer>
 </body>
 </html>
